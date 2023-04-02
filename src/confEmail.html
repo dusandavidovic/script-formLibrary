@@ -1,0 +1,73 @@
+<!--
+ * This template is used to generate email sent to respondent after submission
+ * I uses Google HTML Service: Templated HTML where html is mixed with script  
+ -->
+ 
+<head>
+<style type="text/css">
+.auto-style1 {
+	font-weight: normal;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;		    
+}
+.auto-style2 {
+	font-size: small;
+	font-style: italic;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;		
+}
+.auto-style3 {
+	border: 1px solid #800000;
+}
+.site_name {
+	float: left;
+	font-size: 1.8em;
+	font-family: Serif;
+	font-weight: bold;
+	color: #0051a0;
+	margin: 1em 0 0.4em 4em;
+	text-shadow: 2px 2px 1px rgba(192, 192, 192, 0.7);
+}
+}
+.auto-style4 {
+	background-image: url('https://bhyc.on.ca/wp-content/uploads/2020/01/Homepage-Favicon.png');
+}
+.auto-style5 {
+	color: #800000;
+	font-weight: bold;
+}
+.auto-style6 {
+	border-style: solid;
+	border-color: #0000FF;
+}
+.auto-style7 {
+	color: #800000;
+	font-size: large;
+	text-decoration: underline;
+	font-style: italic;
+    font-weight: bold;
+}
+</style>
+</head>
+
+
+<table style="width: 100%; height: 66px;">
+	<tr>
+		<td style="width: 114px">
+		<a href="www.bhyc.on.ca/" title="Go to BHYC Front Page">
+		<img alt="Bronte Harbour Yacht Club" height="110" src="//bhyc.on.ca/site_media/static/bhyc2011/images/bhyc_logo.png" width="110" /></a></td>
+		<td class="auto-style4">
+    	<h1 class="site_name">Bronte Harbour Yacht Club</h1>
+		</td>
+	</tr>
+</table>
+<p class="auto-style2">&nbsp;</p>
+
+<p class="auto-style1">Hello <?=firstName ?>,</p>
+<p class="auto-style1">Thank you for registering <span class="auto-style7"><em><b><?=boatName ?></b></em></span> for <span class="auto-style7"><em><b><?=eventName ?></b></em></span>. Your submission is received.</p>
+
+<h4 class="auto-style1">In case you need to make any correction <a href="<?= formUrl?>"><b>please, use this link</b></a> for another sumbission.</h4>
+
+    <p>&nbsp;</p>
+    <p class="auto-style2"><strong>This automatic message was sent to you via custom 
+    notification for Google Forms. Please do not reply to this message.</strong></p>
+    
+    
