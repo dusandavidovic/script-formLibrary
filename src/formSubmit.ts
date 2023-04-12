@@ -68,7 +68,7 @@ class FormSubmit {
   }
 
   getMailBody(respObject: FormResponseObject[]) {
-    let body: string = "";
+    let body: string = "Thank you for your response.\n\n";
     respObject.forEach((item) => {
       body += `${item.question}: ${item.answer}\n`;
     });
@@ -76,7 +76,7 @@ class FormSubmit {
   }
   getRecipient(respObj: FormResponseObject[]) {
     const value = respObj.filter((item: FormResponseObject) => {
-      return item.question === COMMON_FIELDS.email;
+      return item.question === COMMON.fields.email;
     });
 
     return value[0] ? value[0].answer : "";
@@ -89,6 +89,10 @@ class FormSubmit {
     let message = this.getMailBody(respValues);
 
     // send the email
-    GmailApp.sendEmail(recipient, subject, message);
+    GmailApp.sendEmail(recipient, subject, message, {
+      name: COMMON.sender,
+      noReply: true,
+      replyTo: "noReply@bhyc.on.ca",
+    });
   }
 }
